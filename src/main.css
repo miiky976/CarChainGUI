@@ -1,0 +1,224 @@
+:root {
+    --primary: #33694A;
+    --surface2: rgba(51, 105, 74, 0.08);
+    --surface5: #E1E7E1;
+    --surface: #FDFCF9;
+    --onsurface: #1A1C1A;
+    --outline: #747873;
+    --tertiary: #4B6269;
+    --primary-container: #B6F0C8;
+    --secondary-container: #D9E6DA;
+    --tiempo: 200ms;
+}
+
+* {
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+body {
+    background-color: var(--surface2);
+}
+
+main {
+    margin: 10px;
+    display: grid;
+    grid-template-columns: 33.33% 33.33% 33.33%;
+    grid-template-rows: 0.5fr 7fr;
+    grid-template-areas:
+        "titulo busqueda busqueda"
+        "conten1 conten2 conten3"
+}
+
+header {
+    border-radius: 10px;
+    border: 1px solid var(--outline);
+    font-size: 120%;
+    margin: 10px;
+    color: #1A1C1A;
+    background-color: var(--surface);
+    padding: 7px;
+    text-align: center;
+}
+
+header a {
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+a {
+    color: var(--onsurface);
+    text-decoration: none;
+}
+
+.varel{
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.varel:hover{
+    background-color: var(--secondary-container);
+}
+
+.Titulo {
+    float: left;
+}
+
+a:hover {
+    color: var(--primary);
+}
+
+header span {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.Perfil {
+    float: right;
+    font-size: 20pt;
+}
+
+.l-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.form {
+    padding: 30px;
+    width: 360px;
+    background-color: var(--surface5);
+    border: 1px solid var(--outline);
+    border-radius: 30px;
+}
+
+.form__div {
+    position: relative;
+    height: 48px;
+    margin-bottom: 1.5rem;
+}
+
+.form__input {
+    font-size: 12pt;
+    border-radius: 5px;
+    border: 2px solid var(--outline);
+    padding: 5px;
+    background-color: var(--surface5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 93%;
+    height: 50%;
+    padding-left: 1rem;
+    z-index: 1;
+}
+
+.form__input:focus {
+    outline: none;
+    border: 2px solid #33694A;
+    transition: var(--tiempo);
+}
+
+.form__label {
+    position: absolute;
+    left: 1rem;
+    top: 0.25rem;
+    font-size: 12pt;
+    padding: 0.25rem;
+    background-color: var(--surface5);
+    transition: var(--tiempo);
+    z-index: 2;
+}
+
+.form__input:focus+.form__label {
+    top: -0.88rem;
+    font-size: 10pt;
+    color: var(--primary);
+}
+
+.form__input:not(:placeholder-shown).form__input:not(:focus)+.form__label {
+    top: -0.88rem;
+    font-size: 10pt;
+    color: var(--primary);
+}
+
+.form__input:not(:placeholder-shown).form__input:not(:focus)+.form__input {
+    border: 2px solid #33694A;
+    transition: var(--tiempo);
+}
+
+.btnPrimary {
+    font-size: 12pt;
+    font-weight: 900;
+    background-color: var(--surface);
+    color: var(--primary);
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+    border: 1px solid var(--outline);
+}
+
+.btnPrimary:hover {
+    background-color: var(--primary-container);
+}
+
+.btnPrimary:focus {
+    color: var(--surface);
+    background-color: var(--primary);
+}
+
+.searchvar {
+    background-color: var(--tertiary);
+    border-radius: 10px;
+    grid-area: busqueda;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.searchTxt {
+    grid-area: titulo;
+    font-size: 14pt;
+}
+
+.searchicon {
+    font-size: 20pt;
+    color: var(--outline);
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+}
+
+.searchInput {
+    border-radius: 10px;
+    padding-left: 1rem;
+    margin: 5px;
+    padding: 5px;
+    font-size: 12pt;
+    border: none;
+}
+
+.searchInput:focus {
+    outline: none;
+}
+
+.grid1 {
+    grid-row: 1;
+    grid-column: 3/3;
+}
+
+
+.card {
+    margin: 10px;
+    padding: 10px;
+    background-color: var(--surface5);
+    border-radius: 20px;
+    border: 1px solid var(--outline);
+    text-align: center;
+}
+
+.imgAuto {
+    border-radius: 20px;
+    width: 90%;
+    padding: 10px;
+}
