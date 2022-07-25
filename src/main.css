@@ -11,6 +11,19 @@
     --tiempo: 200ms;
 }
 
+::selection {
+    background-color: var(--primary);
+    color: var(--surface);
+}
+
+::-webkit-scrollbar{
+    width: 7px;
+}
+::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+    background-color: var(--primary);
+}
+
 * {
     font-family: 'Red Hat Display', sans-serif;
 }
@@ -21,15 +34,9 @@ body {
 
 main {
     margin: 10px;
-    display: grid;
-    grid-template-columns: 33.33% 33.33% 33.33%;
-    grid-template-rows: 0.5fr 7fr;
-    grid-template-areas:
-        "titulo busqueda busqueda"
-        "conten1 conten2 conten3"
 }
 
-header {
+nav {
     border-radius: 10px;
     border: 1px solid var(--outline);
     font-size: 120%;
@@ -40,7 +47,7 @@ header {
     text-align: center;
 }
 
-header a {
+nav a {
     margin-right: 10px;
     margin-left: 10px;
 }
@@ -50,14 +57,14 @@ a {
     text-decoration: none;
 }
 
-.varel{
+.varel {
     border-radius: 10px;
     padding: 5px;
 }
 
-.varel:hover{
+/* .varel:hover {
     background-color: var(--secondary-container);
-}
+} */
 
 .Titulo {
     float: left;
@@ -139,7 +146,7 @@ header span {
 .form__input:not(:placeholder-shown).form__input:not(:focus)+.form__label {
     top: -0.88rem;
     font-size: 10pt;
-    color: var(--primary);
+    color: var(--outline);
 }
 
 .form__input:not(:placeholder-shown).form__input:not(:focus)+.form__input {
@@ -156,24 +163,18 @@ header span {
     padding-left: 10px;
     padding-right: 10px;
     border-radius: 10px;
-    border: 1px solid var(--outline);
+    border: 2px solid var(--outline);
 }
 
 .btnPrimary:hover {
+    border: 2px solid var(--primary);
     background-color: var(--primary-container);
 }
 
 .btnPrimary:focus {
-    color: var(--surface);
+    color: var(--surface5);
+    border: 2px solid var(--primary);
     background-color: var(--primary);
-}
-
-.searchvar {
-    background-color: var(--tertiary);
-    border-radius: 10px;
-    grid-area: busqueda;
-    margin-bottom: 15px;
-    position: relative;
 }
 
 .searchTxt {
@@ -181,32 +182,48 @@ header span {
     font-size: 14pt;
 }
 
-.searchicon {
-    font-size: 20pt;
-    color: var(--outline);
-    position: absolute;
-    top: 0.5rem;
-    left: 0.5rem;
+.searchvar {
+    grid-area: busqueda;
+    display: grid;
+    grid-template-columns: 80% 20%;
 }
 
-.searchInput {
+.simpleTextField {
     border-radius: 10px;
     padding-left: 1rem;
-    margin: 5px;
     padding: 5px;
     font-size: 12pt;
-    border: none;
+    border: 2px solid var(--outline);
+    transition: var(--tiempo);
 }
 
-.searchInput:focus {
+.BtnIcon {
+    line-height: 50%;
+    color: var(--outline);
+    background-color: var(--surface5);
+    border: 2px solid var(--outline);
+    font-size: 20px;
+    border-radius: 20px;
+}
+
+.BtnIcon:hover {
+    color: var(--primary);
+    background-color: var(--primary-container);
+    border: 2px solid var(--primary);
+}
+
+.BtnIcon:active {
     outline: none;
+    background-color: var(--primary);
+    color: var(--secondary-container);
+    border: 2px solid var(--primary);
 }
 
-.grid1 {
-    grid-row: 1;
-    grid-column: 3/3;
+.simpleTextField:focus {
+    outline: none;
+    border: 2px solid var(--primary);
+    transition: var(--tiempo);
 }
-
 
 .card {
     margin: 10px;
@@ -221,4 +238,13 @@ header span {
     border-radius: 20px;
     width: 90%;
     padding: 10px;
+}
+
+.tercios{
+    display: grid;
+    grid-template-columns: 33.33% 33.33% 33.33%;
+    grid-template-rows: 0.5fr 7fr;
+    grid-template-areas:
+        "titulo titulo busqueda"
+        "conten1 conten2 conten3"
 }

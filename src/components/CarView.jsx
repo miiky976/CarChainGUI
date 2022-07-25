@@ -4,7 +4,7 @@ export const CarView = ({img, titulo, descr}) => {
         <div className="terjeta">
             <div className="card">
                 <img className="imgAuto" src={img} />
-                <div class="container">
+                <div className="container">
                     <h4>{titulo}</h4>
                     <p>{descr}</p>
                 </div>
