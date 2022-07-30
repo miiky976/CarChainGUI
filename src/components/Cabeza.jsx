@@ -14,7 +14,7 @@ export const Cabeza = ({ titulo }) => {
                     <a className="varel" href="/Vender">Vender</a>
                 </span>
                 <span className="Perfil">
-                    <a href="/Perfil"><Icon icon="gg:profile"/></a>
+                    <Link to={"/Perfil"}><Icon icon="gg:profile"/></Link>
                 </span>
             </nav>
         </>

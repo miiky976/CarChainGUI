@@ -155,6 +155,7 @@ header span {
 }
 
 .btnPrimary {
+    width: 100%;
     font-size: 12pt;
     font-weight: 900;
     background-color: var(--surface);
@@ -164,6 +165,7 @@ header span {
     padding-right: 10px;
     border-radius: 10px;
     border: 2px solid var(--outline);
+    margin-bottom: 1rem;
 }
 
 .btnPrimary:hover {
@@ -247,4 +249,11 @@ header span {
     grid-template-areas:
         "titulo titulo busqueda"
         "conten1 conten2 conten3"
+}
+
+.p-card{
+    background-color: var(--surface5);
+    padding: 20px;
+    border-radius: 30px;
+    border: 1px solid var(--outline);
 }

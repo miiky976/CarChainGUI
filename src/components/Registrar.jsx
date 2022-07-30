@@ -11,7 +11,7 @@ export const Registrar = () => {
                         <FormTextField content={'Marca'} id={'marca'}/>
                         <FormTextField content={'Motor'} id={'motor'}/>
                         <FormTextField content={'Dueño'} id={'owner'}/>
-                        <BtnPrimary texto={'Registrar'}></BtnPrimary>
+                        <BtnPrimary Texto={'Registrar'}></BtnPrimary>
                 </form>
             </div>
         </main>
