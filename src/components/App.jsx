@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import { Inicio } from "./Inicio";
 import { ProfileCard } from "./ProfileCard";
 import { useState } from "react";
+import { MisAutos } from "./MisAutos";
 export const App = () => {
     const [profid, setprofid] = useState("Ingresar");
     console.log(profid);
@@ -19,6 +20,7 @@ export const App = () => {
                 <Route path="/Registrar" element={<Registrar />} />
                 <Route path="/Comprar" element={<Comprar />} />
                 <Route path="/Perfil" element={<ProfileCard profileid={profid} OnClickState={ChangeProfID} />} />
+                <Route path="/MisAutos" element={<MisAutos />} />
             </Routes>
         </BrowserRouter>
     )

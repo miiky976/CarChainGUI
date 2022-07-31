@@ -18,6 +18,7 @@
 
 ::-webkit-scrollbar{
     width: 7px;
+    height: 7px;
 }
 ::-webkit-scrollbar-thumb{
     border-radius: 10px;
@@ -256,4 +257,69 @@ header span {
     padding: 20px;
     border-radius: 30px;
     border: 1px solid var(--outline);
+}
+
+.MyCarCard{
+    margin-bottom: 10px;
+    display: grid;
+    grid-template-columns: 33.33% 33.33% 33.33%;
+    grid-template-areas:
+        "conten conten button1"
+        "conten conten button2"
+}
+
+.MyCarData{
+    grid-area: conten;
+    padding: 10px;
+    margin-right: 10px;
+    background-color: var(--surface5);
+    border: 1px solid var(--outline);
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 150px;
+    grid-template-areas:
+        "img text text"
+}
+
+.MyCarTexto{
+    grid-area: text;
+    width: 100%;
+}
+
+.imgMiAuto {
+    grid-area: img;
+    border-radius: 20px;
+    width: 140px;
+}
+
+.btn1{
+    grid-area: button1;
+}
+
+.btn2{
+    grid-area: button2;
+}
+
+.BtnPrimaryCont {
+    width: 100%;
+    height: 68%;
+    font-size: 12pt;
+    font-weight: 900;
+    border: 1px solid var(--outline);
+    background-color: var(--primary-container);
+    color: var(--onsurface);
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+.BtnPrimaryCont:hover {
+    background-color: var(--primary);
+}
+
+.BtnPrimaryCont:focus {
+    color: var(--surface5);
+    background-color: var(--tertiary);
 }
